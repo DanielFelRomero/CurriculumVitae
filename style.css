@@ -1,0 +1,45 @@
+:root{
+    --time-transition-fill: 0.2s;
+    --time-line-anim: 1s;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #002731;
+    width: 100%;
+    height: 50%;
+}
+
+.cls-1 {
+    stroke: #fff;
+    stroke-miterlimit: 10;
+}
+
+#logo {
+    position:absolute;
+    width: 70%;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    fill: none;
+    animation: fill 0.5s ease forwards calc( var(--time-transition-fill)*17);
+}
+
+@keyframes line-anim {
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fill{
+    from{
+        fill: transparent;
+    }
+    to{
+        fill: white;
+    }
+}
